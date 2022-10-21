@@ -15,13 +15,14 @@ function viewEfectScroll(){
     
     for (var i=0; i < AnimacionFade.length; i++){
         let AlturaAnimacion = AnimacionFade[i].offsetTop;
-        if(AlturaAnimacion - 500 < scrollTop){
+        if(AlturaAnimacion - 600 < scrollTop){
+            AnimacionFade[i].style.animation = 'Left-In 1s ease'
             AnimacionFade[i].style.opacity = 1;
-            AnimacionFade[i].classList.add('Animacion-Fade-Left-In');
+            
         }else{
+            AnimacionFade[i].style.animation = 'Left-Out 1s ease'
             AnimacionFade[i].style.opacity = 0;
-            AnimacionFade[i].classList.remove('Animacion-Fade-Left-In');
-            AnimacionFade[i].classList.add('Animacion-Fade-Left-Out');
+
         }
     }
 

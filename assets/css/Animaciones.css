@@ -1,0 +1,35 @@
+
+.Fade-Left{
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.Animacion-Fade-Left-In{
+    animation: Left-In 1s;
+}
+
+.Animacion-Fade-Left-Out{
+    animation: Left-Out 1s;
+}
+
+
+
+@keyframes Left-In{
+    0%{
+        transform: translateX(-60px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes Left-Out{
+
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-60px);
+    }
+
+}

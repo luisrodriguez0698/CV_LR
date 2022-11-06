@@ -1,3 +1,9 @@
+const slider_content = document.querySelectorAll('.slider_content')
+const next = document.querySelector('.next')
+const prev = document.querySelector('.prev')
+let index = 0
+
+
 window.addEventListener('load', function(){
 
     // let fotoLoad = document.getElementById('FotoPerfilAnimado');
@@ -9,6 +15,8 @@ window.addEventListener('load', function(){
 })
 
 let AnimacionFade = document.querySelectorAll('.Fade-Left');
+
+
 
 function viewEfectScroll(){
     let scrollTop = document.documentElement.scrollTop;
@@ -31,14 +39,50 @@ function viewEfectScroll(){
 window.addEventListener('scroll', viewEfectScroll);
 
 
-// window.addEventListener('scroll', function(){
-//     let animacion = document.getElementById('SeccionSkills');
-//     let PosicionIMG = animacion.getBoundingClientRect().top;
-//     console.log(PosicionIMG);
 
-//     let tamañoDePantall = this.window.innerHeight/3;
-//     if(PosicionIMG < tamañoDePantall){
-//         animacion.style.animation = 'Prueba 1s ease-out'
-//     }
-// })
+let AnimacionVelozIn = document.querySelectorAll('.Veloz-Left-In');
+let AnimacionVelozRightIn = document.querySelectorAll('.Veloz-Right-In');
+let AnimacionVelozDownIn = document.querySelectorAll('.Veloz-Down-In');
+
+const mount = () => slider_content[index].classList.add('active')
+const unmount = () => slider_content[index].classList.remove('active')
+next.addEventListener('click', () => {
+    unmount()
+    
+    if(index >= slider_content.length - 1){
+        index = 0;
+    }
+    else {
+        index++
+    }
+
+    for (var i=0; i < AnimacionFade.length; i++){
+        AnimacionVelozDownIn[i].style.animation = 'Veloz-Down-In 1s ease';
+        AnimacionVelozIn[i].style.animation = 'Veloz-Left-In 1.5s ease';
+        AnimacionVelozRightIn[i].style.animation = 'Veloz-Right-In 2s ease';
+    }
+
+    mount()
+});
+
+prev.addEventListener('click', () => {
+    unmount()
+    
+    if(index <= 0){
+        index = slider_content.length - 1;
+    }
+    else {
+        index--
+    }
+
+    for (var i=0; i < AnimacionFade.length; i++){
+        AnimacionVelozDownIn[i].style.animation = 'Veloz-Down-In 1s ease';
+        AnimacionVelozIn[i].style.animation = 'Veloz-Left-In 1.5s ease';
+        AnimacionVelozRightIn[i].style.animation = 'Veloz-Right-In 2s ease';
+    }
+
+    mount()
+});
+
+mount()
 

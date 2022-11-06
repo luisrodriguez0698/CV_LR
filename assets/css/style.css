@@ -3,7 +3,7 @@
         --Dorado: #AC8059;
         --Blanco: #F4F7F8;
 
-        --FontTitulo: Futura,Trebuchet MS,Arial,sans-serif; 
+        --FontTitulo: 'Montserrat', sans-serif;
 
 
         --TamañoTitulo: 8rem;
@@ -16,6 +16,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
     }
 
     .Contenedor-Intro{
@@ -253,3 +254,132 @@
         grid-row: 1/2;
     }
     /*SKILLS*/
+
+
+
+
+    /*PORTAFOLIO*/
+
+    .container {
+        position: relative;
+    }
+    
+    .container .slider {
+        width: 100%;
+        height: 90vh;
+        overflow: hidden;
+    }
+    
+    .slider .slider_content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: none;
+    }
+    
+    .slider .slider_content img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.2);
+    }
+    
+    .slider_content .Slider_Text{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 50%;
+        height: 30%;
+        line-height: 40px;
+        text-align: center;
+        color: #f1f1f1;
+    }
+
+    .Slider_Text h3{
+        font-size: 3rem;
+        padding-bottom: 1rem !important;
+    }
+
+    .Slider_Text p{
+        
+        font-size: 1.5rem;
+    }
+    
+    
+    .container .controls {
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 25% !important;
+        margin: 0;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .container .controls .control {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--Dorado);
+        background-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+        border: solid var(--Dorado) 2px;
+        transition: background-color 0.5s;
+    }
+
+    .Btn-vm{
+        margin-top: 2%;
+        font-size: 1.3rem;
+        padding: .5rem 2.5rem;
+        text-transform: uppercase;
+        background-color: rgba(0, 0, 0, 0);
+        color: var(--Dorado);
+        border: solid var(--Dorado) 2px;
+        border-radius: 10px;
+        transition: background-color 0.5s;
+    }
+
+    .Btn-vm:hover{
+        cursor: pointer;
+        background-color: var(--Dorado);
+        color: var(--Blanco);
+    }
+
+    .container .controls .control:hover{
+        background-color: var(--Dorado);
+        color: var(--Blanco);
+    }
+    
+    .slider .active {
+        display: block;
+    }
+
+    /*PORTAFOLIO*/
+
+    /*TEXTO*/
+    .Texto{
+        width: 100%;
+        padding: 10% 0;
+    }
+
+    .Texto p{
+        width: 70%;
+        margin: 0 auto;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .Texto h2{
+        width: 70%;
+        margin: 0 auto;
+        font-size: 2rem;
+        text-align: center;
+    }
+    /*TEXTO*/

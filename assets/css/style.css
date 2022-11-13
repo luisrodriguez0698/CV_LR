@@ -2,6 +2,7 @@
         --Black: #1F2125;
         --Dorado: #AC8059;
         --Blanco: #F4F7F8;
+        --Gris: #323438; 
 
         --FontTitulo: 'Montserrat', sans-serif;
         --FontCursiva: 'Satisfy', cursive;
@@ -520,6 +521,7 @@
         background-color: var(--Black);
         border-radius: 30px;
         margin: auto 0;
+        position: relative;
         -webkit-box-shadow: 9px 0px 121px 25px rgba(39,42,47,1);
         -moz-box-shadow: 9px 0px 121px 25px rgba(39,42,47,1);
         box-shadow: 9px 0px 121px 25px rgba(39,42,47,1);
@@ -534,6 +536,81 @@
         text-align: center;
         margin-top: 15%;
     }
+
+    .form_seccion{
+        height: auto;
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .form_group{
+        position: relative;
+        color: var(--Black);
+        margin: 5% 0 0 0;
+    }
+
+    .form_group textarea{
+        width: 100%;
+        font-size: 1.3rem;
+        color: var(--Blanco);
+        background-color: var(--Gris);
+        padding: 1.3rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        resize: none;
+    }
+
+    .form_input{
+        width: 100%;
+        font-size: 1.3rem;
+        color: var(--Blanco);
+        background-color: var(--Gris);
+        padding: 1.3rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+
+    }
+
+    .form_label{
+        color: #9D9F9D;
+        cursor: text;
+        position: absolute;
+        font-size: 1.3rem;
+        top: 0;
+        left: 15px;
+        transform: translateY(17px);
+        transition: transform .2s, color .2s;
+    }
+
+    .form_input:focus + .form_label,
+    .form_input:not(:placeholder-shown) + .form_label{
+        transform: translateY(-12px) scale(.8);
+        transform-origin: top left;
+        color: var(--Blanco);
+    }
+
+    .BtnEM{
+        display: block;
+        font-size: 1.2rem;
+        padding: .7rem;
+        margin: 0 auto;
+        background-color: var(--Gris);
+        border: none;
+        margin-top: 1.5rem;
+        color: var(--Blanco);
+        transition: background .5s;
+    }
+
+    .BtnEM:hover{
+        background-color: var(--Dorado);
+        cursor: pointer;
+    }
+
     /*FOOTER*/
 
     

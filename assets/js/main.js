@@ -86,3 +86,21 @@ prev.addEventListener('click', () => {
 
 mount()
 
+TweenMax.from(".Contenedor-Black", 1,{
+    opacity: 0,
+    x: -400,
+    ease: Expo.easeInOut
+})
+
+TweenMax.staggerFrom(".FotoPerfil", 2, {
+    opacity: 0,
+    delay: 2.9,
+    x: 400,
+    ease: Power3.easeInOut
+}, 0.08)
+
+TweenMax.from(".Info-Text", 2, {
+    opacity: 0,
+    y: -300,
+    ease: Expo.easeInOut
+})

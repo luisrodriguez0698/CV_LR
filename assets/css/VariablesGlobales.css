@@ -1,0 +1,14 @@
+:root {
+    --Black: #1F2125;
+    --Dorado: #AC8059;
+    --Blanco: #F4F7F8;
+    --Gris: #323438;
+
+    --FontTitulo: 'Montserrat', sans-serif;
+    --FontCursiva: 'Satisfy', cursive;
+
+    --TamañoTitulo: 8rem;
+    --TamañoTitulo-2: 6rem;
+    --TamañoSubtitulo: 4rem;
+    --TamañoSubtitulo-2: 2rem;
+}
